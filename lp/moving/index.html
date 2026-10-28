@@ -215,7 +215,7 @@ footer h5{color:#fff;font-size:1.05rem;margin-bottom:14px}
           <label for="f-consent">Text me about my request</label>
         </div>
         <p class="consent-note">By checking this box, you agree VivaClean may text you about this request at the number you gave. Msg and data rates may apply. Reply STOP to end, HELP for help. Consent is not a condition of purchase.</p>
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAFkxT04ISWxOYjnn" data-size="flexible" data-theme="light"></div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAFkxT04ISWxOYjnn" data-size="flexible" data-theme="light" data-callback="lpTsSolved" data-expired-callback="lpTsExpired" data-error-callback="lpTsExpired"></div>
         <div class="form-error" id="form-error" role="alert"></div>
         <button type="submit" class="submit" id="submit-btn">Get My Free Quote!</button>
         <p class="fineprint">Protected by Cloudflare Turnstile. See our <a href="https://getvivaclean.com/privacy">Privacy Policy</a> and <a href="https://getvivaclean.com/terms">Terms of Service</a>.</p>
@@ -403,6 +403,18 @@ footer h5{color:#fff;font-size:1.05rem;margin-bottom:14px}
     errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
   function clearError() { errBox.style.display = 'none'; errBox.textContent = ''; }
+  // Turnstile tokens expire 300 seconds after they are issued and are
+  // single-use. Track when the current token was solved so a token that
+  // went stale while the form sat open is never submitted: the widget is
+  // reset for a fresh check instead. (A stale token is rejected
+  // server-side as a failed spam check even for a real person.)
+  var tsToken = '';
+  var tsIssuedAt = 0;
+  window.lpTsSolved = function (t) { tsToken = t || ''; tsIssuedAt = Date.now(); };
+  window.lpTsExpired = function () {
+    tsToken = ''; tsIssuedAt = 0;
+    if (window.turnstile) { try { window.turnstile.reset(); } catch (err) {} }
+  };
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     clearError();
@@ -415,9 +427,20 @@ footer h5{color:#fff;font-size:1.05rem;margin-bottom:14px}
     if (!first || !last) { showError('Please add your first and last name.'); return; }
     if (!phone) { showError('Please add your phone number so we can reach you about your quote.'); return; }
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { showError('Please add a valid email address.'); return; }
-    var tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
-    var token = tokenInput ? tokenInput.value : '';
+    var token = '';
+    if (window.turnstile) { try { token = window.turnstile.getResponse() || ''; } catch (err) {} }
+    if (!token) {
+      var tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
+      token = tokenInput ? tokenInput.value : '';
+    }
     if (!token) { showError('Please complete the quick security check above, then tap the button again.'); return; }
+    if (token !== tsToken) { tsToken = token; tsIssuedAt = Date.now(); }
+    if (tsIssuedAt && Date.now() - tsIssuedAt > 240000) {
+      tsToken = ''; tsIssuedAt = 0;
+      if (window.turnstile) { try { window.turnstile.reset(); } catch (err) {} }
+      showError('The security check expired while this form was open. Complete it once more just now, then tap the button again.');
+      return;
+    }
     var payload = {
       name: first + ' ' + last,
       first_name: first,
