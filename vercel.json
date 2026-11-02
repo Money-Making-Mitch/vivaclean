@@ -10,6 +10,76 @@
       "source": "/book/",
       "destination": "https://app.getvivaclean.com/book",
       "permanent": true
+    },
+    {
+      "source": "/author/mike-wills-jr",
+      "destination": "/author/sean-tucker",
+      "permanent": true
+    },
+    {
+      "source": "/author/mike-wills-jr/",
+      "destination": "/author/sean-tucker",
+      "permanent": true
+    },
+    {
+      "source": "/blog/the-benefits-of-professional-window-cleaning-a-case-study-from-vivaclean",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/the-benefits-of-professional-window-cleaning-a-case-study-from-vivaclean/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/the-benefits-of-a-clean-and-organized-closet-a-reflection-from-vivaclean",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/the-benefits-of-a-clean-and-organized-closet-a-reflection-from-vivaclean/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-10-reasons-to-hire-a-professional-house-cleaning-service-in-austin",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-10-reasons-to-hire-a-professional-house-cleaning-service-in-austin/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/case-study",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/case-study/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/reflection",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/reflection/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/insights",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/insights/",
+      "destination": "/blog",
+      "permanent": true
     }
   ]
 }
