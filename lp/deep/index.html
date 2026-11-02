@@ -536,13 +536,6 @@ footer h5{color:#fff;font-size:1.05rem;margin-bottom:14px}
       smsConsent: consent,
       'cf-turnstile-response': token
     };
-    try {
-      var qs = new URLSearchParams(location.search);
-      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid'].forEach(function (k) {
-        var v = qs.get(k);
-        if (v) payload[k] = v;
-      });
-    } catch (err) {}
     btn.disabled = true;
     btn.textContent = 'Sending...';
     fetch('https://app.getvivaclean.com/api/public/office-enquiry', {
