@@ -1,6 +1,15 @@
 {
-  "headers": []
+  "headers": [],
+  "redirects": [
+    {
+      "source": "/book",
+      "destination": "https://app.getvivaclean.com/book",
+      "permanent": true
+    },
+    {
+      "source": "/book/",
+      "destination": "https://app.getvivaclean.com/book",
+      "permanent": true
+    }
+  ]
 }
-
-
-
