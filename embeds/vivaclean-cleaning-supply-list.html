@@ -5,14 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VivaClean Cleaning Supply List</title>
 <style>
-  body { margin:0; font-family: 'Plus Jakarta Sans', Arial, sans-serif; background:#f7fafd; color:#333; }
+/* Hallmark · checked: 2026-11-04 · genre: editorial
+ * built: the project · redesign: polish · v2.0.0 */
+  :root {
+    --vc-font-body: 'Plus Jakarta Sans', Arial, sans-serif;
+    --vc-bg: #f7fafd;
+    --vc-ink: #333;
+    --vc-heading: #1A3967;
+    --vc-body: #555;
+    --vc-paper: #fefef9;
+    --vc-border: #e3ecf5;
+    --vc-accent: #2080F0;
+    --vc-note-bg: #fff8e6;
+    --vc-note-border: #f0dfa8;
+    --vc-note-ink: #66531a;
+  }
+  body { margin:0; font-family: var(--vc-font-body); background: var(--vc-bg); color: var(--vc-ink); }
   .wrap { max-width: 880px; margin: 0 auto; padding: 28px 24px; }
-  h1 { font-size: 22px; color:#1A3967; margin: 0 0 4px; }
-  p.sub { margin: 0 0 20px; color:#555; font-size: 15px; }
+  h1 { font-size: 22px; color: var(--vc-heading); margin: 0 0 4px; }
+  p.sub { margin: 0 0 20px; color: var(--vc-body); font-size: 15px; }
   ul { list-style:none; margin:0; padding:0; display:grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap:10px; }
-  li { background:#fff; border:1px solid #e3ecf5; border-radius:10px; padding:12px 14px; font-size:15px; display:flex; gap:10px; align-items:center; }
-  li .dot { flex:0 0 auto; width:10px; height:10px; border-radius:50%; background:#2080F0; }
-  .note { margin-top:20px; background:#fff8e6; border:1px solid #f0dfa8; border-radius:10px; padding:12px 14px; font-size:14px; color:#66531a; }
+  li { background: var(--vc-paper); border:1px solid var(--vc-border); border-radius:10px; padding:12px 14px; font-size:15px; display:flex; gap:10px; align-items:center; }
+  .note { margin-top:20px; background: var(--vc-note-bg); border:1px solid var(--vc-note-border); border-radius:10px; padding:12px 14px; font-size:14px; color: var(--vc-note-ink); }
 </style>
 </head>
 <body>
@@ -20,22 +34,22 @@
   <h1>Everything Our Cleaners Bring</h1>
   <p class="sub">The full VivaClean supply cart: 16 items on every visit, included in your flat price.</p>
   <ul>
-    <li><span class="dot"></span>Vacuum cleaner</li>
-    <li><span class="dot"></span>Mop and bucket</li>
-    <li><span class="dot"></span>Microfiber cloths</li>
-    <li><span class="dot"></span>Scrub brushes</li>
-    <li><span class="dot"></span>All-purpose cleaner</li>
-    <li><span class="dot"></span>Glass and mirror cleaner</li>
-    <li><span class="dot"></span>Bathroom cleaner</li>
-    <li><span class="dot"></span>Kitchen degreaser</li>
-    <li><span class="dot"></span>Disinfectant spray</li>
-    <li><span class="dot"></span>Sponges and scour pads</li>
-    <li><span class="dot"></span>Extendable duster</li>
-    <li><span class="dot"></span>Floor cleaner</li>
-    <li><span class="dot"></span>Stainless steel polish</li>
-    <li><span class="dot"></span>Trash bags</li>
-    <li><span class="dot"></span>Paper towels</li>
-    <li><span class="dot"></span>Gloves and shoe covers</li>
+    <li>Vacuum cleaner</li>
+    <li>Mop and bucket</li>
+    <li>Microfiber cloths</li>
+    <li>Scrub brushes</li>
+    <li>All-purpose cleaner</li>
+    <li>Glass and mirror cleaner</li>
+    <li>Bathroom cleaner</li>
+    <li>Kitchen degreaser</li>
+    <li>Disinfectant spray</li>
+    <li>Sponges and scour pads</li>
+    <li>Extendable duster</li>
+    <li>Floor cleaner</li>
+    <li>Stainless steel polish</li>
+    <li>Trash bags</li>
+    <li>Paper towels</li>
+    <li>Gloves and shoe covers</li>
   </ul>
   <div class="note">The one thing we do not bring is a toilet brush, so have one handy. Every product we use is safe around kids and pets. If you want a specific product used on a surface, leave it out and tell us where it is.</div>
 </div>
