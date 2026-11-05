@@ -1,0 +1,113 @@
+/* Hallmark · checked: 2026-11-04 · genre: editorial · redesign: polish · built: the project
+ * Token layer for the compiled Tailwind pages: every arbitrary-value colour, gradient, shadow and transition-all class in the markup is replaced by a vc-* utility defined here from these tokens, value for value.
+/* Hallmark · dropped mailto:info@getvivaclean.com · replaced with mailto:support@getvivaclean.com, the only customer-facing email, on office-cleaning */
+ * One deliberate change: --vc-faint is #6f6f6f, darkened from the #888 it replaces, so small grey text clears the contrast floor (gate 40). */
+:root {
+  --vc-ink: #333;
+  --vc-body: #555;
+  --vc-soft: #666;
+  --vc-faint: #6f6f6f;
+  --vc-mist: #bbb;
+  --vc-fog: #ccc;
+  --vc-ash: #aaa;
+  --vc-smoke: #999;
+  --vc-stone: #777;
+  --vc-gravel: #929292;
+  --vc-slate-soft: #94a3b8;
+  --vc-slate: #475569;
+  --vc-slate-deep: #1e293b;
+  --vc-navy: #0f172a;
+  --vc-navy-deep: #1a3967;
+  --vc-navy-deep-end: #0f2647;
+  --vc-paper: #fafafa;
+  --vc-paper-bright: #fcfdfd;
+  --vc-paper-via: #f8fafc;
+  --vc-paper-via-a50: rgba(248, 250, 252, 0.5);
+  --vc-blue: #2080f0;
+  --vc-blue-a40: rgba(32, 128, 240, 0.4);
+  --vc-blue-a10: rgba(32, 128, 240, 0.1);
+  --vc-blue-deep: #0f66c9;
+  --vc-sky: #0ea5e9;
+  --vc-sky-deep: #0369a1;
+  --vc-instagram: #E4405F;
+  --vc-facebook: #1877F2;
+  --vc-heading: #222;
+  --vc-credit: #8a8a8a;
+  --vc-scrim: #000000d9;
+  --vc-scrim-shadow: #00000080;
+  --vc-glow-radial: radial-gradient(circle at 30% 40%, rgba(32, 128, 240, 0.3), transparent 60%);
+  --vc-shadow-cta: 0 9px 20px -5px rgba(32, 128, 240, 0.4);
+  --vc-shadow-cta-sm: 0 4px 12px -2px rgba(32, 128, 240, 0.4);
+  --vc-shadow-cta-md: 0 4px 14px 0 rgba(32, 128, 240, 0.39);
+  --vc-shadow-cta-lg: 0 6px 20px rgba(32, 128, 240, 0.23);
+  --vc-shadow-cta-soft: 0 4px 12px rgba(32, 128, 240, 0.3);
+  --vc-shadow-cta-strong: 0 9px 20px -5px rgba(32, 128, 240, 0.5);
+  --vc-shadow-cta-xl: 0 12px 28px -5px rgba(32, 128, 240, 0.6);
+  --vc-shadow-cta-xl-soft: 0 12px 28px -5px rgba(32, 128, 240, 0.5);
+  --vc-shadow-header: 0 1px 10px -3px rgba(0, 0, 0, 0.1);
+  --vc-shadow-glow: 0 0 20px rgba(255, 255, 255, 0.3);
+  --vc-shadow-glow-sm: 0 0 12px rgba(255, 255, 255, 0.7);
+  --vc-shadow-rise: 0 -4px 30px rgba(32, 128, 240, 0.5);
+  --vc-shadow-rise-soft: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  --vc-shadow-card: 0 8px 40px -8px rgba(0, 0, 0, 0.15);
+  --vc-shadow-panel: 0 8px 30px rgb(0, 0, 0, 0.06);
+}
+.vc-ink { color: var(--vc-ink); }
+.vc-body { color: var(--vc-body); }
+.vc-soft { color: var(--vc-soft); }
+.vc-faint { color: var(--vc-faint); }
+.vc-mist { color: var(--vc-mist); }
+.vc-fog { color: var(--vc-fog); }
+.vc-ash { color: var(--vc-ash); }
+.vc-smoke { color: var(--vc-smoke); }
+.vc-stone { color: var(--vc-stone); }
+.vc-gravel { color: var(--vc-gravel); }
+.vc-slate-soft { color: var(--vc-slate-soft); }
+.vc-slate { color: var(--vc-slate); }
+.vc-slate-deep { color: var(--vc-slate-deep); }
+.vc-navy { color: var(--vc-navy); }
+.vc-navy-bg { background-color: var(--vc-navy); }
+.vc-navy-deep { color: var(--vc-navy-deep); }
+.vc-hover-navy-deep:hover { color: var(--vc-navy-deep); }
+.vc-paper { background-color: var(--vc-paper); }
+.vc-paper-bright { background-color: var(--vc-paper-bright); }
+.vc-blue-bg { background-color: var(--vc-blue); }
+.vc-blue-bg-10 { background-color: var(--vc-blue-a10); }
+.vc-instagram { color: var(--vc-instagram); }
+.vc-hover-instagram:hover { color: var(--vc-instagram); }
+.vc-facebook { color: var(--vc-facebook); }
+.vc-hover-facebook:hover { color: var(--vc-facebook); }
+.vc-placeholder-ash::placeholder { color: var(--vc-ash); }
+.vc-glow-radial { background-image: var(--vc-glow-radial); }
+.vc-grad-from { --tw-gradient-from: var(--vc-blue); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+.vc-grad-from-40 { --tw-gradient-from: var(--vc-blue-a40); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+.vc-grad-to { --tw-gradient-to: var(--vc-sky); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+.vc-grad-from-deep { --tw-gradient-from: var(--vc-sky-deep); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+.vc-grad-from-navy { --tw-gradient-from: var(--vc-navy-deep); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+.vc-grad-to-navy { --tw-gradient-to: var(--vc-navy-deep-end); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
+.vc-grad-via { --tw-gradient-via: var(--vc-paper-via-a50); --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-via-stops); }
+.vc-prose-navy :where(h1, h2, h3, h4, h5, h6, th):not(:where([class~=not-prose], [class~=not-prose] *)) { color: var(--vc-navy); }
+.vc-transition { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(0.4, 0, 0.2, 1))); transition-duration: var(--tw-duration, var(--default-transition-duration, 150ms)); }
+.vc-shadow-cta { --tw-shadow: var(--vc-shadow-cta); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-cta-sm { --tw-shadow: var(--vc-shadow-cta-sm); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-cta-md { --tw-shadow: var(--vc-shadow-cta-md); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-cta-lg { --tw-shadow: var(--vc-shadow-cta-lg); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-cta-soft { --tw-shadow: var(--vc-shadow-cta-soft); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-cta-strong { --tw-shadow: var(--vc-shadow-cta-strong); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-cta-xl { --tw-shadow: var(--vc-shadow-cta-xl); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-header { --tw-shadow: var(--vc-shadow-header); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-glow { --tw-shadow: var(--vc-shadow-glow); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-glow-sm { --tw-shadow: var(--vc-shadow-glow-sm); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-rise { --tw-shadow: var(--vc-shadow-rise); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-rise-soft { --tw-shadow: var(--vc-shadow-rise-soft); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-card { --tw-shadow: var(--vc-shadow-card); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-shadow-panel { --tw-shadow: var(--vc-shadow-panel); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-hover-shadow-cta-lg:hover { --tw-shadow: var(--vc-shadow-cta-lg); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-hover-shadow-cta-xl:hover { --tw-shadow: var(--vc-shadow-cta-xl); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+.vc-hover-shadow-cta-xl-soft:hover { --tw-shadow: var(--vc-shadow-cta-xl-soft); box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow); }
+
+/* Hallmark · gate 50: display heads carry overflow-wrap and min-width */
+h1, h2, h3 { overflow-wrap: break-word; min-width: 0; }
+
+/* Hallmark · finish-review fix: hero badges wrap instead of crushing at phone widths */
+@media (max-width: 560px) { .vc-hero-badge { flex-wrap: wrap; justify-content: center; row-gap: 2px; } }
