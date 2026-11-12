@@ -77,7 +77,7 @@
 .vc-hover-instagram:hover { color: var(--vc-instagram); }
 .vc-facebook { color: var(--vc-facebook); }
 .vc-hover-facebook:hover { color: var(--vc-facebook); }
-.vc-placeholder-ash::placeholder { color: var(--vc-ash); }
+.vc-placeholder-ash::placeholder { color: var(--vc-faint); } /* Impeccable pass 2026-11-12: ash (#aaa) measured 2.2:1; faint is the token already darkened for the contrast floor */
 .vc-glow-radial { background-image: var(--vc-glow-radial); }
 .vc-grad-from { --tw-gradient-from: var(--vc-blue); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
 .vc-grad-from-40 { --tw-gradient-from: var(--vc-blue-a40); --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position)); }
