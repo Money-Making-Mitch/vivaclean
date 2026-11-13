@@ -3,18 +3,18 @@
  * pre-emit critique: P4 H4 E3 S4 R5 V3 · weakest: E, the compiled one-line move in move out cleaning page hid every colour as a raw literal; lifted each colour, shadow and radius into a token without changing a value
  * built: the project · redesign: polish · v2.0.0 */
 :root {
-  --vc-c-0284c7: #0284c7;
+  --vc-c-0284c7: #0369a1;
   --vc-c-0369a1: #0369a1;
   --vc-c-075985: #075985;
   --vc-c-0c4a6e: #0c4a6e;
   --vc-c-0f172a: #0f172a;
   --vc-c-0f66c9: #0f66c9;
   --vc-c-1e293b: #1e293b;
-  --vc-c-2080f0: #2080f0;
-  --vc-c-2080f014: #2080f014;
-  --vc-c-2080f01f: #2080f01f;
-  --vc-c-2080f024: #2080f024;
-  --vc-c-2080f033: #2080f033;
+  --vc-c-2080f0: #0f66c9;
+  --vc-c-2080f014: #0f66c914;
+  --vc-c-2080f01f: #0f66c91f;
+  --vc-c-2080f024: #0f66c924;
+  --vc-c-2080f033: #0f66c933;
   --vc-c-334155: #334155;
   --vc-c-475569: #475569;
   --vc-c-64748b: #64748b;
@@ -38,7 +38,7 @@
   --vc-shadow-0-1px-3px-0f172a0f: 0 1px 3px #0f172a0f;
   --vc-shadow-0-20px-50px-20px-0f172a59: 0 20px 50px -20px #0f172a59;
   --vc-shadow-0-20px-50px-20px-0f172a73: 0 20px 50px -20px #0f172a73;
-  --vc-shadow-0-4px-14px-2080f063: 0 4px 14px #2080f063;
+  --vc-shadow-0-4px-14px-2080f063: 0 4px 14px #0f66c963;
   --vc-radius-12px: 12px;
   --vc-radius-14px: 14px;
   --vc-radius-16px: 16px;
