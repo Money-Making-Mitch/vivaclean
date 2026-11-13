@@ -129,3 +129,10 @@ input::placeholder, textarea::placeholder { color: #526581; opacity: 1; }
    carrying the w-[1em] class to 1em of its surrounding text (the cells set
    text-lg, so the icons land at 18px as designed). */
 svg[class~="w-[1em]"] { width: 1em; height: 1em; }
+
+/* Missing-utility repairs 2026-11-12 (remaining three; the w-[1em] icon pin
+ * landed separately on main as an svg rule): these classes are used in page markup
+ * but no compiled stylesheet defines them. Values match the Tailwind scale. */
+.text-\[1\.05rem\] { font-size: 1.05rem; }
+.border-b-2 { border-bottom-width: 2px; }
+.mt-14 { margin-top: 3.5rem; }
